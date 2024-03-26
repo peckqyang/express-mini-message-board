@@ -2,4 +2,11 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  div.container
+    ul.message-stream
+      each message in messages
+        li.message-item
+          div.message-content #{message.text}
+          div.message-name #{message.user}
+          div.message-date #{message.added}
+    a(href="/new" class="add-message-button") Add New Message

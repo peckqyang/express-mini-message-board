@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+  body
+    h1 Add a new message!
+    .form-container.container
+      form(action='/new', method='POST')
+        .form-group
+          label(for='name') Name:
+          input#name(type='text', name='name', required)
+        .form-group
+          label(for='message') Message:
+          textarea#message(name='message', rows='5', required)
+        .form-group
+          button(type='submit') Submit
+
+
